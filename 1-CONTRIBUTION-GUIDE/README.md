@@ -209,6 +209,7 @@ Quickstart CI engine provides few pre-created azure components which can be used
 + **GEN-KEYVAULT-RESOURCEGROUP-NAME** - the name of the resource group for the keyvault
 + **GEN-KEYVAULT-FQDN-URI** - the FQDN URI of the keyvault
 + **GEN-KEYVAULT-RESOURCE-ID** - the resource ID of the keyvault
++ **GEN-KEYVAULT-PASSWORD-SECRET-NAME** - the secret name for a password reference
 + **GEN-KEYVAULT-PASSWORD-REFERENCE** - the reference parameter used to retrieve a KeyVault Secret (use "reference" for the property name, not "value")
 + **GEN-KEYVAULT-SSL-SECRET-NAME** - the name of the secret where the sample SSL cert is stored in the keyvault
 + **GEN-KEYVAULT-SSL-SECRET-URI** - the URI of the sample SSL cert stored in the test keyvault
@@ -242,7 +243,13 @@ Quickstart CI engine provides few pre-created azure components which can be used
 **Custom Domain & SSL Cert related placeholders:**
 
 + **GEN-FRONTDOOR-NAME** - placeholder for the frontdoor name reserved for CI/CD
-+ **GEN-FRONTDOOR-CUSTOM-HOSTNAME** - custom hostname with CNAME record mapped for the GEN-FRONTDOOR-NAME value 
++ **GEN-FRONTDOOR-CUSTOM-HOSTNAME** - custom hostname with CNAME record mapped for the GEN-FRONTDOOR-NAME value
+
+**AppConfiguration Store related placeholders:**
+
++ **GEN-APPCONFIGSTORE-NAME** - placeholder for the Microsoft.AppConfiguration/configurationStores
++ **GEN-APPCONFIGSTORE-RESOURCEGROUP-NAME** - resource group name for the AppConfig store
++ **GEN-APPCONFIGSTORE-KEY1** - sample key/value stored in the AppConfig store
 
 Here's an example in an `azuredeploy.parameters.json` file:
 
